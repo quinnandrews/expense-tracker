@@ -10,7 +10,7 @@ import java.net.URI;
  * @author Quinn Andrews
  *
  */
-public class ExpenseTrackerController {
+public abstract class ExpenseTrackerController {
 
     /**
      * <p>Generates a URI to an instance of an Entity. Added to the Header after the instance has been inserted.
