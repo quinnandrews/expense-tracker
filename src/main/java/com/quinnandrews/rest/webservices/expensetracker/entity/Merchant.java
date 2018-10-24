@@ -24,18 +24,18 @@ public class Merchant {
     @Id
     @Column(name = "merchant_id")
     @GeneratedValue
-    @ApiModelProperty(notes = "User.id")
+    @ApiModelProperty(notes = "Merchant.id")
     private Long id;
 
     @Column(name = "merchant_name", length = 32, unique = true, nullable = false)
     @NotBlank(message = "Merchant.name cannot be null or blank.")
     @Size(max = 32, message = "Merchant.name cannot be more than 32 characters long.")
-    @ApiModelProperty(notes = "User.id")
+    @ApiModelProperty(notes = "Merchant.name")
     private String name;
 
     @OneToMany(fetch = FetchType.LAZY)
     @JsonIgnore
-    @ApiModelProperty(notes = "User.transactions")
+    @ApiModelProperty(notes = "Merchant.transactions")
     private List<Transaction> transactions;
 
     public Merchant() {
